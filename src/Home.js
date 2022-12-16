@@ -3,10 +3,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Movies from './components/Movies';
 import MovieCard from './components/MovieCard';
+import Modal from './components/Modal';
 
 function Home() {
   return (
-    <div style={{ padding: "20px 75px" }}>
+    <div style={{ padding: "20px 75px"}}>
+      {/* <Modal /> */}
       <Navbar />
       <hr />
       <div>
