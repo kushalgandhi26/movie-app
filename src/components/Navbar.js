@@ -12,13 +12,13 @@ const Navbar = ({setMovieList}) => {
     }
 
     return (
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap:"wrap" }}>
             <div>
                 <img src={Logo} alt="logo" />
             </div>
             <div>
                 <form onSubmit={handleSubmit}>
-                    <input style={{ padding: "6px" }} type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} />
+                    <input style={{ padding: "10px", width:"180px" }} type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} />
                 </form>
             </div>
         </div>

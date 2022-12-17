@@ -18,9 +18,9 @@ const Modal = ({ setIsOpen, movieInfo }) => {
                     <img width={"266px"} height={"389px"} src={"https://image.tmdb.org/t/p/w500/" + movieInfo.poster_path} alt="Army of the Dead" />
                 </div>
                 <div>
-                    <div style={{ marginBottom: "10px" }}>Release date:<span> {movieInfo.release_date}</span></div>
+                    <div style={{ marginBottom: "10px", fontWeight: "bold" }}>Release date:<span style={{ fontWeight: "normal" }}> {movieInfo.release_date}</span></div>
                     <div style={{ marginBottom: "10px" }}>{movieInfo.overview}</div>
-                    <div>{movieInfo.vote_average}/ 10 ({movieInfo.vote_count} total votes)</div>
+                    <div><span style={{ fontWeight: "bold" }}>{movieInfo.vote_average}</span> / 10 ({movieInfo.vote_count} total votes)</div>
                 </div>
             </div>
 

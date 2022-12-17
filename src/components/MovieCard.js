@@ -26,7 +26,7 @@ const MovieCard = ({ movie, setIsOpen, setMovieInfo }) => {
                 }}>{movie.vote_average}</div>
                 <img width={"278px"} height={"302px"} style={{ borderRadius: "7px 7px 0 0" }} src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt="movie poster" />
             </div>
-            <div style={{ height: "30px", textAlign: "center", borderRadius: "0 0 7px 7px" }}>{movie.title}</div>
+            <div style={{ width: "231px", minHeight: "40px", textAlign: "center", borderRadius: "0 0 7px 7px", transform:"translateY(10%)"}}>{movie.title}</div>
         </div>
     )
 }
