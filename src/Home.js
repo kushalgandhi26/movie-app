@@ -1,20 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Movies from './components/Movies';
-import MovieCard from './components/MovieCard';
 import Modal from './components/Modal';
+import { useState } from 'react';
 
 function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [movieInfo, setMovieInfo] = useState({});
+  const [movieList, setMovieList] = useState({});
+
   return (
     <div style={{ padding: "20px 75px"}}>
-      {/* <Modal /> */}
-      <Navbar />
+      {isOpen && <Modal movieInfo={movieInfo} setIsOpen={setIsOpen}/>}
+      <Navbar setMovieList={setMovieList}/>
       <hr />
       <div>
         <h2>Most Recent Movies</h2>
         <div>
-          <Movies />
+          <Movies setMovieInfo={setMovieInfo} setIsOpen={setIsOpen} movieList={movieList} setMovieList={setMovieList}/>
         </div>
       </div>
     </div>
